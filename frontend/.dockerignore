@@ -1,8 +1,8 @@
 node modules
 npm-debug. log
 Dockerfile
-. dockerignore
+.dockerignore
 .git
 .gitignore
-. env
+.env
 dist
