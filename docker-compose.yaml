@@ -9,13 +9,14 @@ services:
       - "3000:3000"
 
 
-  frontend_service:
-    build: ./frontend
-    container_name: frontend-container
-    restart: always
-    env_file:
-      - ./frontend/.env
-    ports:
-      - "4000:4000"
-    depends_on:
-      - backend_service
+  frontend:
+      build:
+        context: ./frontend
+        args:
+          VITE_API_URL: http://3.26.242.54:5000/api
+      container name: frontend
+      restart: always
+      ports:
+        - "5173:5173"
+      depends on:
+        - backend
