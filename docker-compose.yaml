@@ -1,5 +1,5 @@
 services:
-  backend_service:
+  backend:
     build: ./backend
     container_name: backend-container
     restart: always
